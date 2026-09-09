@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://signal-electric-llc-eric-f564.vercel.app/sitemap.xml
