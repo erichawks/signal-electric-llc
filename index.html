@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Signal Electric LLC | Licensed Electricians in Signal Mountain, TN</title>
   <meta name="description" content="Signal Electric LLC — licensed and insured residential and commercial electricians serving Signal Mountain and the Chattanooga area. EV chargers, generators, service calls, panels, and new construction." />
-  <meta name="theme-color" content="#102050" />
+  <meta name="theme-color" content="#f4f1ea" />
   <link rel="icon" href="https://images.squarespace-cdn.com/content/v1/65a00dbad08a6229f37c8c6e/284bb9d6-bfa2-41c8-a791-a0bf3ee6ded9/IMG_0002.png?format=100w" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,26 +13,27 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --navy:#102050;
-      --navy-2:#1a2c58;
-      --ink:#f3f0d8;
-      --muted:#b7c4c4;
-      --cream:#e2e5ae;
+      --bg:#f4f1ea;
+      --surface:#ffffff;
+      --navy:#24363a;
+      --navy-2:#1e2f4d;
+      --ink:#1b2438;
+      --muted:#5d6a73;
+      --cream:#e8e2b8;
       --rust:#d0573a;
-      --rust-2:#e46a48;
-      --sage:#7a9a86;
-      --card:rgba(226,229,174,0.06);
-      --line:rgba(208,87,58,0.38);
+      --rust-2:#e06a48;
+      --sage:#6f8b7d;
+      --line:rgba(208,87,58,0.28);
     }
     * { box-sizing:border-box; margin:0; padding:0; }
     html { scroll-behavior:smooth; }
-    body { font-family:Inter,system-ui,sans-serif; background:var(--navy); color:var(--ink); line-height:1.55; min-height:100vh; }
+    body { font-family:Inter,system-ui,sans-serif; background:var(--bg); color:var(--ink); line-height:1.55; min-height:100vh; }
     a { color:inherit; text-decoration:none; }
     .wrap { width:min(1120px, calc(100% - 32px)); margin:0 auto; }
-    header { position:sticky; top:0; z-index:20; background:rgba(16,32,80,0.94); backdrop-filter:blur(12px); border-bottom:1px solid rgba(226,229,174,0.12); }
+    header { position:sticky; top:0; z-index:20; background:rgba(244,241,234,0.94); backdrop-filter:blur(12px); border-bottom:1px solid rgba(36,54,58,0.08); }
     .nav { display:flex; align-items:center; justify-content:space-between; gap:18px; padding:10px 0; }
     .brand { display:flex; align-items:center; gap:16px; min-width:0; }
-    .logo-mark { background:#fff; border-radius:18px; padding:4px; line-height:0; box-shadow:0 0 0 1px rgba(226,229,174,0.16); flex:0 0 auto; }
+    .logo-mark { background:transparent; border-radius:0; padding:0; line-height:0; flex:0 0 auto; }
     .logo-mark img { display:block; height:156px; width:auto; }
     .brand-name {
       display:flex;
@@ -48,7 +49,7 @@
       font-size:1.85rem;
       line-height:1;
       letter-spacing:0.06em;
-      color:var(--cream);
+      color:var(--navy);
       text-transform:uppercase;
     }
     .brand-name .word-meta {
@@ -72,42 +73,46 @@
       border-radius:2px;
     }
     .nav-actions { display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end; }
-    .btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; border-radius:999px; padding:10px 16px; font-weight:600; font-size:0.92rem; border:1px solid transparent; transition:0.18s ease; }
-    .btn-gold { background:var(--rust); color:#fff8f4; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; border-radius:8px; padding:10px 16px; font-weight:600; font-size:0.92rem; border:1px solid transparent; transition:0.18s ease; }
+    .btn-gold { background:var(--rust); color:#fff; }
     .btn-gold:hover { background:var(--rust-2); }
-    .btn-ghost { background:transparent; color:var(--cream); border-color:rgba(226,229,174,0.28); }
-    .btn-ghost:hover { border-color:var(--rust); color:#fff; }
-    .hero { position:relative; overflow:hidden; padding:56px 0 48px; }
-    .hero::before { content:""; position:absolute; inset:0; background:radial-gradient(900px 420px at 85% -10%, rgba(208,87,58,0.18), transparent 60%), radial-gradient(700px 380px at 0% 100%, rgba(122,154,134,0.14), transparent 55%); pointer-events:none; }
+    .btn-ghost { background:transparent; color:var(--navy); border-color:rgba(36,54,58,0.18); }
+    .btn-ghost:hover { border-color:var(--rust); color:var(--rust); }
+    .hero { position:relative; overflow:hidden; padding:48px 0 40px; }
     .hero-grid { position:relative; display:grid; grid-template-columns:1.15fr 0.85fr; gap:36px; align-items:center; }
     .eyebrow { color:var(--rust); font-weight:700; letter-spacing:0.16em; text-transform:uppercase; font-size:0.76rem; margin-bottom:12px; }
-    h1 { font-family:Oswald,sans-serif; font-size:clamp(2.3rem,5vw,4.1rem); line-height:0.95; text-transform:uppercase; letter-spacing:0.02em; margin-bottom:16px; color:var(--cream); }
+    h1 { font-family:Oswald,sans-serif; font-size:clamp(2.3rem,5vw,4.1rem); line-height:0.95; text-transform:uppercase; letter-spacing:0.02em; margin-bottom:16px; color:var(--navy); }
     h1 em { font-style:normal; color:var(--rust); }
     .lede { color:var(--muted); font-size:1.05rem; max-width:54ch; margin-bottom:24px; }
     .hero-ctas { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:22px; }
     .badges { display:flex; flex-wrap:wrap; gap:8px; }
-    .badge { font-size:0.78rem; color:var(--muted); border:1px solid rgba(122,154,134,0.35); background:var(--card); padding:6px 10px; border-radius:999px; }
-    .card-panel { background:linear-gradient(180deg,rgba(226,229,174,0.08),rgba(16,32,80,0.35)); border:1px solid rgba(226,229,174,0.14); border-radius:20px; padding:24px; box-shadow:0 20px 50px rgba(0,0,0,0.25); }
-    .card-panel h2 { font-family:Oswald,sans-serif; font-size:1.3rem; letter-spacing:0.04em; margin-bottom:8px; color:var(--cream); }
+    .badge { font-size:0.78rem; color:var(--muted); border:1px solid rgba(36,54,58,0.12); background:var(--surface); padding:6px 10px; border-radius:999px; }
+    .card-panel { background:var(--surface); border:1px solid rgba(36,54,58,0.08); border-radius:20px; padding:24px; box-shadow:0 12px 30px rgba(36,54,58,0.06); }
+    .card-panel h2 { font-family:Oswald,sans-serif; font-size:1.3rem; letter-spacing:0.04em; margin-bottom:8px; color:var(--navy); }
     .phone-list { display:grid; gap:10px; margin:16px 0 8px; }
-    .phone { display:flex; justify-content:space-between; align-items:center; background:rgba(0,0,0,0.18); border:1px solid rgba(226,229,174,0.1); border-radius:12px; padding:12px 14px; }
-    .phone strong { font-size:1.05rem; color:var(--cream); }
+    .phone { display:flex; justify-content:space-between; align-items:center; background:var(--bg); border:1px solid rgba(36,54,58,0.08); border-radius:12px; padding:12px 14px; }
+    .phone strong { font-size:1.05rem; color:var(--navy); }
     .phone small { color:var(--muted); }
     section { padding:28px 0 12px; }
-    .section-title { font-family:Oswald,sans-serif; font-size:1.8rem; letter-spacing:0.04em; text-transform:uppercase; margin-bottom:8px; color:var(--cream); }
+    .section-title { font-family:Oswald,sans-serif; font-size:1.8rem; letter-spacing:0.04em; text-transform:uppercase; margin-bottom:8px; color:var(--navy); }
     .section-sub { color:var(--muted); margin-bottom:22px; max-width:62ch; }
     .services { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
-    .service { background:var(--card); border:1px solid rgba(226,229,174,0.12); border-radius:16px; padding:18px; min-height:148px; }
-    .service h3 { font-size:1.02rem; margin:10px 0 6px; color:var(--cream); }
+    .service { background:var(--surface); border:1px solid rgba(36,54,58,0.08); border-radius:16px; padding:18px; min-height:148px; }
+    .service h3 { font-size:1.02rem; margin:10px 0 6px; color:var(--navy); }
     .service p { color:var(--muted); font-size:0.92rem; }
-    .icon { width:36px; height:36px; border-radius:10px; display:grid; place-items:center; background:rgba(208,87,58,0.16); color:var(--rust); font-size:1.1rem; }
+    .icon { width:36px; height:36px; border-radius:10px; display:grid; place-items:center; background:rgba(208,87,58,0.12); color:var(--rust); font-size:1.1rem; }
     .split { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:18px; }
-    .quote { background:var(--navy-2); border-left:3px solid var(--rust); border-radius:0 16px 16px 0; padding:18px; }
+    .quote { background:var(--surface); border-left:3px solid var(--rust); border-radius:0 16px 16px 0; padding:18px; }
     .quote cite { display:block; margin-top:10px; color:var(--muted); font-style:normal; font-size:0.86rem; }
-    .cta-band { margin:36px 0 8px; background:linear-gradient(90deg,#1a2c58,#102050 55%,#24344a); border:1px solid var(--line); border-radius:20px; padding:28px; display:flex; justify-content:space-between; align-items:center; gap:18px; }
-    footer { border-top:1px solid rgba(226,229,174,0.12); margin-top:36px; padding:28px 0 40px; color:var(--muted); font-size:0.9rem; }
+    .cta-band { margin:36px 0 8px; background:var(--rust); color:#fff; border-radius:20px; padding:28px; display:flex; justify-content:space-between; align-items:center; gap:18px; }
+    .cta-band .eyebrow { color:#ffe8df; }
+    .cta-band .section-title { color:#fff; }
+    .cta-band .section-sub { color:#ffe8df; }
+    .cta-band .btn-gold { background:#1b2438; color:#fff; }
+    .cta-band .btn-ghost { color:#fff; border-color:rgba(255,255,255,0.45); }
+    footer { border-top:1px solid rgba(36,54,58,0.08); margin-top:36px; padding:28px 0 40px; color:var(--muted); font-size:0.9rem; }
     .foot { display:flex; justify-content:space-between; gap:18px; flex-wrap:wrap; }
-    .foot a:hover { color:var(--cream); }
+    .foot a:hover { color:var(--rust); }
     @media (max-width:860px) {
       .hero-grid, .services, .split, .cta-band { grid-template-columns:1fr; }
       .cta-band { flex-direction:column; align-items:flex-start; }
@@ -140,7 +145,7 @@
     <section class="hero">
       <div class="wrap hero-grid">
         <div>
-          <p class="eyebrow">Residential & Commercial Electrical</p>
+          <p class="eyebrow">Residential and Commercial Electrical Service</p>
           <h1>Honest, reliable,<br />consistent <em>service.</em></h1>
           <p class="lede">Licensed electricians serving Signal Mountain and the greater Chattanooga area. Safe, code-compliant work for homes, shops, barns, and commercial buildings — from a quick service call to a full panel or generator install.</p>
           <div class="hero-ctas">
@@ -163,7 +168,7 @@
             <a class="phone" href="tel:+14232858008"><div><small>Call or text</small><br /><strong>(423) 285-8008</strong></div><span>☎</span></a>
             <a class="phone" href="tel:+19312566229"><div><small>Office / service</small><br /><strong>(931) 256-6229</strong></div><span>☎</span></a>
           </div>
-          <p style="color:var(--muted);font-size:0.88rem">Owner/operator: Calob Merryfield<br />Signal Mountain, TN 37377</p>
+          <p style="color:var(--muted);font-size:0.88rem">Owner/operator: Calob Merryfield<br />Signal Mountain, TN 37377<br /><a href="mailto:info@signal-electric.com">info@signal-electric.com</a></p>
         </aside>
       </div>
     </section>
@@ -223,13 +228,14 @@
   <footer>
     <div class="wrap foot">
       <div>
-        <strong style="color:var(--cream)">Signal Electric LLC</strong><br />
+        <strong style="color:var(--navy)">Signal Electric LLC</strong><br />
         Signal Mountain, TN 37377<br />
         TN Electrical License #80668 · Owner: Calob Merryfield
       </div>
       <div>
         <a href="tel:+14232858008">(423) 285-8008</a> ·
         <a href="tel:+19312566229">(931) 256-6229</a><br />
+        <a href="mailto:info@signal-electric.com">info@signal-electric.com</a><br />
         <a href="https://www.facebook.com/p/Signal-Electric-LLC-61556335614519/" target="_blank" rel="noopener">Facebook page</a>
       </div>
       <div>
