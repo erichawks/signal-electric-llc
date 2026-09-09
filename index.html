@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Signal Electric LLC | Licensed Electricians in Signal Mountain, TN</title>
+  <meta name="description" content="Signal Electric LLC — licensed and insured residential and commercial electricians serving Signal Mountain and the Chattanooga area. EV chargers, generators, service calls, panels, and new construction." />
+  <meta name="theme-color" content="#0b1c2c" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230b1c2c'/%3E%3Cpath d='M36 8L16 36h16l-4 20 24-32H36l4-16z' fill='%23f5b942'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #0b1c2c;
+      --navy-2: #12263a;
+      --navy-3: #1a334d;
+      --gold: #f5b942;
+      --gold-2: #ffd36a;
+      --ink: #e8eef4;
+      --muted: #9bb0c3;
+      --white: #ffffff;
+      --card: rgba(255,255,255,0.05);
+      --line: rgba(245,185,66,0.28);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Inter, system-ui, sans-serif;
+      background: var(--navy);
+      color: var(--ink);
+      line-height: 1.55;
+      min-height: 100vh;
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+    header {
+      position: sticky; top: 0; z-index: 20;
+      background: rgba(11,28,44,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .nav {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 16px; padding: 14px 0;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; }
+    .logo {
+      width: 42px; height: 42px; border-radius: 10px;
+      background: linear-gradient(160deg, #1e3f5e, #0b1c2c);
+      border: 1px solid var(--line);
+      display: grid; place-items: center;
+    }
+    .brand-name {
+      font-family: Oswald, sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      font-size: 1.15rem;
+      line-height: 1.1;
+    }
+    .brand-name span { color: var(--gold); display: block; font-size: 0.72rem; letter-spacing: 0.16em; font-weight: 500; }
+    .nav-actions { display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      border-radius: 999px; padding: 10px 16px; font-weight: 600; font-size: 0.92rem;
+      border: 1px solid transparent; transition: 0.18s ease;
+    }
+    .btn-gold { background: var(--gold); color: #1a1304; }
+    .btn-gold:hover { background: var(--gold-2); }
+    .btn-ghost { background: transparent; color: var(--ink); border-color: rgba(255,255,255,0.16); }
+    .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+    .hero {
+      position: relative; overflow: hidden;
+      padding: 64px 0 48px;
+    }
+    .hero::before {
+      content: "";
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(900px 420px at 85% -10%, rgba(245,185,66,0.16), transparent 60%),
+        radial-gradient(700px 380px at 0% 100%, rgba(56,140,214,0.12), transparent 55%);
+      pointer-events: none;
+    }
+    .hero-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 36px;
+      align-items: center;
+    }
+    .eyebrow {
+      color: var(--gold);
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-size: 0.76rem;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-family: Oswald, sans-serif;
+      font-size: clamp(2.3rem, 5vw, 4.1rem);
+      line-height: 0.95;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      margin-bottom: 16px;
+    }
+    h1 em { font-style: normal; color: var(--gold); }
+    .lede { color: var(--muted); font-size: 1.05rem; max-width: 54ch; margin-bottom: 24px; }
+    .hero-ctas { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 22px; }
+    .badges { display: flex; flex-wrap: wrap; gap: 8px; }
+    .badge {
+      font-size: 0.78rem; color: var(--muted);
+      border: 1px solid rgba(255,255,255,0.1);
+      background: var(--card);
+      padding: 6px 10px; border-radius: 999px;
+    }
+    .card-panel {
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+    }
+    .card-panel h2 {
+      font-family: Oswald, sans-serif;
+      font-size: 1.3rem;
+      letter-spacing: 0.04em;
+      margin-bottom: 8px;
+    }
+    .phone-list { display: grid; gap: 10px; margin: 16px 0 8px; }
+    .phone {
+      display: flex; justify-content: space-between; align-items: center;
+      background: rgba(0,0,0,0.18);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 12px; padding: 12px 14px;
+    }
+    .phone strong { font-size: 1.05rem; letter-spacing: 0.02em; }
+    .phone small { color: var(--muted); }
+    section { padding: 28px 0 12px; }
+    .section-title {
+      font-family: Oswald, sans-serif;
+      font-size: 1.8rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .section-sub { color: var(--muted); margin-bottom: 22px; max-width: 62ch; }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    .service {
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 16px;
+      padding: 18px;
+      min-height: 148px;
+    }
+    .service h3 {
+      font-size: 1.02rem;
+      margin: 10px 0 6px;
+    }
+    .service p { color: var(--muted); font-size: 0.92rem; }
+    .icon {
+      width: 36px; height: 36px; border-radius: 10px;
+      display: grid; place-items: center;
+      background: rgba(245,185,66,0.12);
+      color: var(--gold); font-size: 1.1rem;
+    }
+    .split {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 18px;
+    }
+    .quote {
+      background: var(--navy-2);
+      border-left: 3px solid var(--gold);
+      border-radius: 0 16px 16px 0;
+      padding: 18px 18px 16px;
+    }
+    .quote p { font-size: 1rem; }
+    .quote cite { display: block; margin-top: 10px; color: var(--muted); font-style: normal; font-size: 0.86rem; }
+    .cta-band {
+      margin: 36px 0 8px;
+      background: linear-gradient(90deg, #1a334d, #12263a 55%, #1f3a22);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 28px;
+      display: flex; justify-content: space-between; align-items: center; gap: 18px;
+    }
+    footer {
+      border-top: 1px solid rgba(255,255,255,0.06);
+      margin-top: 36px; padding: 28px 0 40px;
+      color: var(--muted); font-size: 0.9rem;
+    }
+    .foot {
+      display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap;
+    }
+    .foot a:hover { color: var(--gold); }
+    @media (max-width: 860px) {
+      .hero-grid, .services, .split, .cta-band { grid-template-columns: 1fr; }
+      .cta-band { flex-direction: column; align-items: flex-start; }
+      h1 { font-size: 2.4rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top">
+        <div class="logo" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M13 2L4 14h7l-1 8 10-14h-7l0-6z" fill="#f5b942"/></svg>
+        </div>
+        <div class="brand-name">SIGNAL ELECTRIC<span>LLC · SIGNAL MOUNTAIN, TN</span></div>
+      </a>
+      <div class="nav-actions">
+        <a class="btn btn-ghost" href="tel:+19312566229">(931) 256-6229</a>
+        <a class="btn btn-gold" href="tel:+14232858008">Call or Text</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="eyebrow">Residential &amp; Commercial Electrical</p>
+          <h1>Honest, reliable,<br />consistent <em>service.</em></h1>
+          <p class="lede">Licensed electricians serving Signal Mountain and the greater Chattanooga area. Safe, code-compliant work for homes, shops, barns, and commercial buildings — from a quick service call to a full panel or generator install.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-gold" href="tel:+14232858008">Call / Text (423) 285-8008</a>
+            <a class="btn btn-ghost" href="tel:+19312566229">(931) 256-6229</a>
+            <a class="btn btn-ghost" href="https://www.facebook.com/p/Signal-Electric-LLC-61556335614519/" target="_blank" rel="noopener">Facebook</a>
+          </div>
+          <div class="badges">
+            <span class="badge">Licensed &amp; Insured</span>
+            <span class="badge">TN License #80668</span>
+            <span class="badge">Tesla Certified Installer</span>
+            <span class="badge">NEC Code Guarantee</span>
+            <span class="badge">BBB Rating: A</span>
+          </div>
+        </div>
+        <aside class="card-panel">
+          <h2>Need an electrician?</h2>
+          <p style="color:var(--muted)">Fast local response. Call or text today — we handle troubleshooting, upgrades, EV charging, generators, and new work.</p>
+          <div class="phone-list">
+            <a class="phone" href="tel:+14232858008"><div><small>Call or text</small><br /><strong>(423) 285-8008</strong></div><span>☎</span></a>
+            <a class="phone" href="tel:+19312566229"><div><small>Office / service</small><br /><strong>(931) 256-6229</strong></div><span>☎</span></a>
+          </div>
+          <p style="color:var(--muted);font-size:0.88rem">Owner/operator: Calob Merryfield<br />Signal Mountain, TN 37377</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="wrap" id="services">
+      <h2 class="section-title">Our services</h2>
+      <p class="section-sub">Quality work done safe, every time. Residential and commercial electrical service built around clean workmanship and National Electrical Code standards.</p>
+      <div class="services">
+        <article class="service"><div class="icon">⚡</div><h3>Service calls &amp; troubleshooting</h3><p>Prompt diagnosis and repair when circuits trip, lights fail, or something just does not look right.</p></article>
+        <article class="service"><div class="icon">⛽</div><h3>EV charger installation</h3><p>Tesla Wall Connectors and chargers for all major EV brands. Clean, code-compliant home charging.</p></article>
+        <article class="service"><div class="icon">⛈</div><h3>Standby generators</h3><p>Home standby generator installation so heat, cooling, refrigeration, and lights stay on in an outage.</p></article>
+        <article class="service"><div class="icon">☰</div><h3>Panels &amp; service upgrades</h3><p>Panel replacements, service upgrades, and wiring updates for older homes that need more capacity.</p></article>
+        <article class="service"><div class="icon">☼</div><h3>Lighting &amp; receptacles</h3><p>Fixture hanging, custom lighting, and receptacle work done neatly and level — residential or commercial.</p></article>
+        <article class="service"><div class="icon">⌂</div><h3>New construction &amp; remodels</h3><p>Shops, barns, underground feeders, commercial wiring, inspections, and full electrical design.</p></article>
+      </div>
+    </section>
+
+    <section class="wrap" id="about">
+      <div class="split">
+        <div class="card-panel">
+          <p class="eyebrow">Up to code</p>
+          <h2 class="section-title" style="font-size:1.45rem">NEC standards, no shortcuts</h2>
+          <p class="section-sub" style="margin-bottom:0">Signal Electric has an up-to-code guarantee. Every installation follows National Electrical Code standards so the work is safe, consistent, and built to last — including AC and water-heater hookups, underground feeders, and commercial lighting.</p>
+        </div>
+        <div class="card-panel">
+          <p class="eyebrow">Service area</p>
+          <h2 class="section-title" style="font-size:1.45rem">Signal Mountain &amp; Chattanooga</h2>
+          <p class="section-sub" style="margin-bottom:0">Local, reliable, and licensed in Tennessee. We work on homes, shops, barns, and commercial properties around Signal Mountain and the surrounding area.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap" id="reviews">
+      <h2 class="section-title">What customers say</h2>
+      <div class="split">
+        <blockquote class="quote">
+          <p>“Great big thanks to Calob and Ben with Signal Electric! They are prompt, professional and master electricians.”</p>
+          <cite>Customer review</cite>
+        </blockquote>
+        <blockquote class="quote">
+          <p>“Five stars. Signal Electric was fantastic! They were polite, courteous, and hung our light fixture up perfectly. I will use them again for sure!”</p>
+          <cite>Customer review</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <div class="wrap">
+      <div class="cta-band">
+        <div>
+          <p class="eyebrow">Ready when you are</p>
+          <h2 class="section-title" style="margin:0">Call or text today</h2>
+          <p class="section-sub" style="margin:8px 0 0">Fast response. Local and reliable. Licensed and insured.</p>
+        </div>
+        <div class="hero-ctas" style="margin:0">
+          <a class="btn btn-gold" href="tel:+14232858008">(423) 285-8008</a>
+          <a class="btn btn-ghost" href="tel:+19312566229">(931) 256-6229</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <div>
+        <strong style="color:var(--ink)">Signal Electric LLC</strong><br />
+        Signal Mountain, TN 37377<br />
+        TN Electrical License #80668 · Owner: Calob Merryfield
+      </div>
+      <div>
+        <a href="tel:+14232858008">(423) 285-8008</a> ·
+        <a href="tel:+19312566229">(931) 256-6229</a><br />
+        <a href="https://www.facebook.com/p/Signal-Electric-LLC-61556335614519/" target="_blank" rel="noopener">Facebook page</a>
+      </div>
+      <div>
+        Serving Signal Mountain and the Chattanooga area.<br />
+        &copy; <span id="y"></span> Signal Electric LLC. All rights reserved.
+      </div>
+    </div>
+  </footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
