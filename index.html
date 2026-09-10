@@ -10,7 +10,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preconnect" href="https://images.squarespace-cdn.com" />
-  <link rel="preconnect" href="https://images.unsplash.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
   <style>
     :root {
@@ -100,10 +99,10 @@
     .section-title { font-family:Oswald,sans-serif; font-size:1.8rem; letter-spacing:0.04em; text-transform:uppercase; margin-bottom:8px; color:var(--navy); }
     .section-sub { color:var(--muted); margin-bottom:22px; max-width:62ch; }
     .services { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
-    .service { background:var(--surface); border:1px solid rgba(36,54,58,0.08); border-radius:16px; overflow:hidden; padding:0 0 16px; }
-    .service-img { display:block; width:100%; height:148px; object-fit:cover; }
-    .service h3 { font-size:1.02rem; margin:12px 16px 6px; color:var(--navy); }
-    .service p { color:var(--muted); font-size:0.92rem; margin:0 16px; }
+    .service { background:var(--surface); border:1px solid rgba(36,54,58,0.08); border-radius:16px; padding:18px; min-height:148px; }
+    .service h3 { font-size:1.02rem; margin:10px 0 6px; color:var(--navy); }
+    .service p { color:var(--muted); font-size:0.92rem; }
+    .icon { width:36px; height:36px; border-radius:10px; display:grid; place-items:center; background:rgba(208,87,58,0.12); color:var(--rust); font-size:1.1rem; }
     .split { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:18px; }
     .quote { background:var(--surface); border-left:3px solid var(--rust); border-radius:0 16px 16px 0; padding:18px; }
     .quote cite { display:block; margin-top:10px; color:var(--muted); font-style:normal; font-size:0.86rem; }
@@ -167,36 +166,12 @@
       <h2 class="section-title">Our services</h2>
       <p class="section-sub">Quality work done safe, every time. Residential and commercial electrical service built around clean workmanship and National Electrical Code standards.</p>
       <div class="services">
-        <article class="service">
-          <img class="service-img" src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=800&h=480&q=80" alt="Electrician troubleshooting wiring" />
-          <h3>Service calls & troubleshooting</h3>
-          <p>Prompt diagnosis and repair when circuits trip, lights fail, or something just does not look right.</p>
-        </article>
-        <article class="service">
-          <img class="service-img" src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=800&h=480&q=80" alt="Electric vehicle charger plugged into a car" />
-          <h3>EV charger installation</h3>
-          <p>Tesla Wall Connectors and chargers for all major EV brands. Clean, code-compliant home charging.</p>
-        </article>
-        <article class="service">
-          <img class="service-img" src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=800&h=480&q=80" alt="Power lines against a stormy sky" />
-          <h3>Standby generators</h3>
-          <p>Home standby generator installation so heat, cooling, refrigeration, and lights stay on in an outage.</p>
-        </article>
-        <article class="service">
-          <img class="service-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=480&q=80" alt="Electrical tools and panel work" />
-          <h3>Panels & service upgrades</h3>
-          <p>Panel replacements, service upgrades, and wiring updates for older homes that need more capacity.</p>
-        </article>
-        <article class="service">
-          <img class="service-img" src="https://images.unsplash.com/photo-1524484485831-a92ffc0de03f?auto=format&fit=crop&w=800&h=480&q=80" alt="Hanging light fixtures" />
-          <h3>Lighting & receptacles</h3>
-          <p>Fixture hanging, custom lighting, and receptacle work done neatly and level — residential or commercial.</p>
-        </article>
-        <article class="service">
-          <img class="service-img" src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&h=480&q=80" alt="Home under construction" />
-          <h3>New construction & remodels</h3>
-          <p>Shops, barns, underground feeders, commercial wiring, inspections, and full electrical design.</p>
-        </article>
+        <article class="service"><div class="icon">⚡</div><h3>Service calls & troubleshooting</h3><p>Prompt diagnosis and repair when circuits trip, lights fail, or something just does not look right.</p></article>
+        <article class="service"><div class="icon">⛽</div><h3>EV charger installation</h3><p>Tesla Wall Connectors and chargers for all major EV brands. Clean, code-compliant home charging.</p></article>
+        <article class="service"><div class="icon">⛈</div><h3>Standby generators</h3><p>Home standby generator installation so heat, cooling, refrigeration, and lights stay on in an outage.</p></article>
+        <article class="service"><div class="icon">☰</div><h3>Panels & service upgrades</h3><p>Panel replacements, service upgrades, and wiring updates for older homes that need more capacity.</p></article>
+        <article class="service"><div class="icon">☼</div><h3>Lighting & receptacles</h3><p>Fixture hanging, custom lighting, and receptacle work done neatly and level — residential or commercial.</p></article>
+        <article class="service"><div class="icon">⌂</div><h3>New construction & remodels</h3><p>Shops, barns, underground feeders, commercial wiring, inspections, and full electrical design.</p></article>
       </div>
     </section>
     <section class="wrap" id="about">
