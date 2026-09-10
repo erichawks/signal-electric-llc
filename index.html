@@ -52,18 +52,20 @@
       color:var(--navy);
       text-transform:uppercase;
     }
-    .brand-name .word-meta {
+    .brand-name .word-meta,
+    .header-license {
       display:flex;
       align-items:center;
       justify-content:center;
       gap:8px;
-      margin-top:8px;
       color:var(--sage);
       font-size:0.72rem;
       font-weight:700;
       letter-spacing:0.18em;
       text-transform:uppercase;
+      white-space:nowrap;
     }
+    .brand-name .word-meta { margin-top:8px; }
     .brand-name .word-meta::before,
     .brand-name .word-meta::after {
       content:"";
@@ -72,7 +74,7 @@
       background:var(--rust);
       border-radius:2px;
     }
-    .nav-actions { display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end; }
+    .header-license { flex:0 0 auto; }
     .btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; border-radius:8px; padding:10px 16px; font-weight:600; font-size:0.92rem; border:1px solid transparent; transition:0.18s ease; }
     .btn-gold { background:var(--rust); color:#fff; }
     .btn-gold:hover { background:var(--rust-2); }
@@ -119,7 +121,7 @@
       h1 { font-size:2.4rem; }
       .logo-mark img { height:108px; }
       .brand-name .word-signal { font-size:1.2rem; }
-      .nav-actions { display:none; }
+      .header-license { font-size:0.62rem; }
     }
   </style>
 </head>
@@ -135,10 +137,7 @@
           <span class="word-meta">Signal Mountain, TN</span>
         </div>
       </a>
-      <div class="nav-actions">
-        <a class="btn btn-ghost" href="tel:+19312566229">(931) 256-6229</a>
-        <a class="btn btn-gold" href="tel:+14232858008">Call or Text</a>
-      </div>
+      <div class="header-license">TN License #80668</div>
     </div>
   </header>
   <main id="top">
